@@ -1,0 +1,137 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="format-detection" content="telephone=no">
+	<title>show++</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<style type="text/css">
+		body{background: #ffe5d4;}
+		img{width: 100%;}
+		/*@media screen and (min-width: 375px) and (max-width: 414px){*/
+			/*img{*/
+				/*height: 100%;*/
+			/*}*/
+		/*}*/
+        .section{overflow:hidden}
+		.section .arrow{width:11%;height:1.95rem;position:absolute;bottom:2.6rem;left:45%;-webkit-animation: shandong 1s linear infinite;animation:shandong 1s linear infinite;}
+        .section .arrow img{width:100%;}
+        .section #replay{width:15%;height:3.25rem;position:absolute;bottom:4.6rem;left:43%;}
+        .section #replay img{width:100%;}
+
+        @-webkit-keyframes shandong {
+            0%,100%{bottom: .6rem;opacity: 1;}
+            50%{bottom:.2rem;opacity: 0;}
+        }
+        @keyframes shandong {
+            0%,100%{bottom: .6rem;opacity: 1;}
+            50%{bottom:.2rem;opacity: 0;}
+        }
+	</style>
+</head>
+<body>
+	<ul id="dowebok">
+	    <li class="section">
+			<img src="images/1.jpg" alt="">
+			<div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+	    </li>
+	    <li class="section">
+			<img src="images/2.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+	    </li>
+	    <li class="section">
+			<img src="images/3.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+	    </li>
+	    <li class="section">
+			<img src="images/4.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+	    </li>
+		<li class="section">
+			<img src="images/5.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+		</li>
+		<li class="section">
+			<img src="images/6.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+		</li>
+		<li class="section">
+			<img src="images/7.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+		</li>
+		<li class="section">
+			<img src="images/8.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+		</li>
+		<li class="section">
+			<img src="images/9.jpg" alt="">
+            <div class="arrow">
+                <img src="images/arrow_03.png" alt="">
+            </div>
+		</li>
+		<li class="section last-page">
+			<img src="images/10.jpg" alt="">
+            <div id="replay">
+                <img src="images/replay_03.png" alt="">
+            </div>
+		</li>
+	</ul>
+	<script type="text/javascript" src="library/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="library/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="library/jquery.fullPage.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+		    $('#dowebok').fullpage({
+//                loopBottom:true,      //相反从底部循环滚动，默认false
+                continuousVertical:true   //循环滚动
+                //loopBottom 与 continuousVertical不可同时使用
+            });
+            // 点击箭头显示下一页
+            $(document).on('click', '.arrow', function(){
+                $.fn.fullpage.moveSectionDown();
+            });
+            //点击重播
+            $(document).on('click', '#replay', function(){
+                $.fn.fullpage.moveTo(1,0);  //section从1开始，slide从0开始
+            });
+
+
+		});
+
+        // 控制body元素根据页面宽度变化 font-size值随之改变
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 16 * (clientWidth / 320) + 'px';
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            //doc.addEventListener('DOMContentLoaded', recalc, false);
+            $(function () { recalc(); })
+        })(document, window);
+	</script>
+
+</body>
+</html>

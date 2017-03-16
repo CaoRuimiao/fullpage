@@ -1,0 +1,42 @@
+@charset "utf-8";
+/*公共部分*/
+/*html5 reset*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; outline: 0; /*font-size: 62.5%;*/ vertical-align: baseline; /* 垂直对齐一幅图像 */ background: transparent; /* 背景透明无颜色 */}
+html,body { font: normal /*62.5%  16px */ 32px "microsoft yahei", Arial, sans-serif; -webkit-font-smoothing: antialiased; /*灰度平滑*/color:#434343;}
+
+img { border: none; }
+ul, ol { list-style: none; }
+a { text-decoration: none; margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; }
+
+:focus { outline: 0; }
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+blockquote, q { quotes: none; }/* 不会产生任何引号 */
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+ins { background-color: #ff9; color: #000; text-decoration: none; } /* 带有新插入部分的文本：去掉下划线 */
+mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }/* 带有标记的文本 */
+del { text-decoration: line-through; }/* 删除文本 */
+abbr[title], dfn[title] { border-bottom: 1px dotted #000; cursor: help; }
+table { border-collapse: collapse; border-spacing: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; margin: 1em 0; padding: 0; }
+input, select { vertical-align: middle; }
+
+.clear { clear: both; height: 0; font-size: 0px; overflow: hidden; }
+.clearfix:before, .clearfix:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+.clearfix { *zoom: 1;}
+
+li img{ display:block;}
+a:link {  color:#3a3a3a; text-decoration:none;}
+a:visited { color:#3a3a3a; text-decoration:none;}
+a:hover {  color:#990000; text-decoration:none; }
+.container{ width: 100%; margin: 0 auto; }
+
+
+
+
+
+
+
+
+
+
+
